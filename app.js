@@ -206,3 +206,7 @@ const products = [
     rating: { rate: 3.6, count: 145 },
   },
 ];
+
+const asc = products.toSorted((a, b) => a.price - b.price);
+console.log("New sorted", asc);
+console.log("Original", products);
