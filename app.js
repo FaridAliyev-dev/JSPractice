@@ -1,95 +1,40 @@
-let arr = [
-  { name: "test", key: 1 },
-  { name: "task", key: 2 },
-  { name: "tanqo", key: 3 },
-  { name: "like", key: 4 },
-  { name: "task", key: 5 },
-  { name: "trust", key: 6 },
-  { name: "test", key: 7 },
-  { name: "last", key: 8 },
-  { name: "tanqo", key: 9 },
-  { name: "elephant", key: 10 },
-  { name: "love", key: 11 },
-  { name: "small", key: 12 },
-  { name: "little", key: 13 },
-];
+var h1 = document.createElement("h1");
+h1.textContent = "RESPONSIVE CARDS CSS";
 
-// 1) "name"-i "t" herfi ile bashlayan obyektleri yeni arraya yigin (filter)
-let startsWithT = arr.filter((obj) => obj.name.startsWith("t"));
-console.log("1) Starts with 't':", startsWithT);
+var titleDiv = document.querySelector(".title");
 
-// 2) "name"-i "t" herfi ile bashlayib "t" herfi ile biten obyektlerin sayini tapin (forEach)
-let countStartsAndEndsWithT = 0;
-arr.forEach((obj) => {
-  if (obj.name.startsWith("t") && obj.name.endsWith("t")) {
-    countStartsAndEndsWithT++;
-  }
-});
-console.log(
-  "2) Count of names starting and ending with 't':",
-  countStartsAndEndsWithT
-);
+titleDiv.appendChild(h1);
 
-// 3) "name"-i "t" herfi ile bashlayib "t" herfi ile biten obyektlerin "key"lerinin cemini tapin
-let sumKeys = 0;
-arr.forEach((obj) => {
-  if (obj.name.startsWith("t") && obj.name.endsWith("t")) {
-    sumKeys += obj.key;
-  }
-});
-console.log("3) Sum of keys (starts and ends with 't'):", sumKeys);
+var containerCenter = document.querySelector(".container");
 
-// 4) "name"-i "e" herfi ile biten obyeklerdeki name-in deyerini "SuperDev" sozu ile evezleyin.
-let replacedNames = arr.map((obj) => {
-  if (obj.name.endsWith("e")) {
-    return { ...obj, name: "SuperDev" };
-  }
-  return obj;
-});
-console.log("4) Replace names ending with 'e':", replacedNames);
+containerCenter.style.display = "flex";
+containerCenter.style.justifyContent = "center";
+containerCenter.style.marginTop = "150px";
+containerCenter.style.flexDirection = "column";
+containerCenter.style.alignItems = "center";
 
-// 5) "name"-i en uzun olan obyekti tapin
-let longestNameObj = arr.reduce(
-  (longest, obj) => (obj.name.length > longest.name.length ? obj : longest),
-  arr[0]
-);
-console.log("5) Object with the longest name:", longestNameObj);
+var containerWrapper = document.querySelector(".wrapper");
 
-// 6) "name"-i en uzun olan obyektin key'ni tapin
-console.log("6) Key of the object with the longest name:", longestNameObj.key);
+containerWrapper.style.display = "flex";
+containerWrapper.style.flexDirection = "row";
+containerWrapper.style.gap = "40px";
+var containerCard = document.querySelector(".card");
 
-// 7) "name"-i en uzun olan obyektin indexin kvadratini hesablayin
+containerCard.style.border = "2px solid black";
+containerCard.style.height = "350px";
+containerCard.style.width = "350px";
+containerCard.style.borderRadius = "10px";
 
-// 8) "name"-inin uzunlugu 4 olan obyektlerden ibaret yeni array yaradin. (filter)
-let length4Names = arr.filter((obj) => obj.name.length === 4);
-console.log("8) Names with length 4:", length4Names);
+var containerCard2 = document.querySelector(".card2");
 
-// 9) En boyuk "key"i olan obyektin "name"-ini tapin
-let maxKeyObj = arr.reduce(
-  (max, obj) => (obj.key > max.key ? obj : max),
-  arr[0]
-);
-console.log("9) Name of the object with the largest key:", maxKeyObj.name);
+containerCard2.style.border = "2px solid black";
+containerCard2.style.height = "350px";
+containerCard2.style.width = "350px";
+containerCard2.style.borderRadius = "10px";
 
-// 10) Terkibinde 2 'l' (el) herfi olan obyekt(ler)i tapin.
-arr.forEach((item) => {
-  let lCount = 0;
-  [...item.name].forEach((letter) => {
-    if (letter.toLocaleLowerCase() === "l") {
-      lCount++;
-    }
-  });
-  if (lCount === 2) {
-    console.log(item);
-  }
-});
-// 11) Terkibinde ən az 2 't' herfi olan obyekt(ler)i tapın.
+var containerCard3 = document.querySelector(".card3");
 
-// 12) Key'leri 10'dan boyuk ve "name"-i 'l' herfi ile bashlayan obyektleri tapaq
-let keyGreaterThan10AndStartsWithL = arr.filter(
-  (obj) => obj.key > 10 && obj.name.startsWith("l")
-);
-console.log(
-  "12) Objects with key > 10 and name starting with 'l':",
-  keyGreaterThan10AndStartsWithL
-);
+containerCard3.style.border = "2px solid black";
+containerCard3.style.height = "350px";
+containerCard3.style.width = "350px";
+containerCard3.style.borderRadius = "10px";
