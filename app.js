@@ -38,3 +38,9 @@ containerCard3.style.border = "2px solid black";
 containerCard3.style.height = "350px";
 containerCard3.style.width = "350px";
 containerCard3.style.borderRadius = "10px";
+
+var cardItems = document.querySelector(".cardItems");
+
+const icon = document.createElement("i");
+
+icon.className = '<i class="fa-brands fa-twitter fa-3x"></i>';
