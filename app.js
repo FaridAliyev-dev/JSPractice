@@ -53,8 +53,7 @@ console.log("5) Object with the longest name:", longestNameObj);
 console.log("6) Key of the object with the longest name:", longestNameObj.key);
 
 // 7) "name"-i en uzun olan obyektin indexin kvadratini hesablayin
-let longestNameIndex = arr.findIndex(obj => obj === longestNameObj);
-console.log("7) Square of index of the longest name object:", longestNameIndex ** 2);
+
 
 // 8) "name"-inin uzunlugu 4 olan obyektlerden ibaret yeni array yaradin. (filter)
 let length4Names = arr.filter(obj => obj.name.length === 4);
@@ -69,8 +68,7 @@ let containsTwoLs = arr.filter(obj => (obj.name.match(/l/g) || []).length === 2)
 console.log("10) Objects with exactly two 'l's:", containsTwoLs);
 
 // 11) Terkibinde ən az 2 't' herfi olan obyekt(ler)i tapın.
-let containsTwoTs = arr.filter(obj => (obj.name.match(/t/g) || []).length >= 2);
-console.log("11) Objects with at least two 't's:", containsTwoTs);
+
 
 // 12) Key'leri 10'dan boyuk ve "name"-i 'l' herfi ile bashlayan obyektleri tapaq
 let keyGreaterThan10AndStartsWithL = arr.filter(obj => obj.key > 10 && obj.name.startsWith("l"));
