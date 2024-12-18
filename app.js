@@ -1,46 +1,23 @@
-var h1 = document.createElement("h1");
-h1.textContent = "RESPONSIVE CARDS CSS";
+const plusButton = document.querySelector(".plusButton");
+const minusButton = document.querySelector(".minusButton");
+const applyButton = document.querySelector(".applyButton");
+const input = document.querySelector(".inputSection")
+const text = document.querySelector(".loremText");
 
-var titleDiv = document.querySelector(".title");
+let fontSize = 16;
 
-titleDiv.appendChild(h1);
+text.style.fontSize = fontSize + "px";
 
-var containerCenter = document.querySelector(".container");
+plusButton.addEventListener("click", function () {
+  fontSize += 1;
+  text.style.fontSize = fontSize + "px";
+});
 
-containerCenter.style.display = "flex";
-containerCenter.style.justifyContent = "center";
-containerCenter.style.marginTop = "150px";
-containerCenter.style.flexDirection = "column";
-containerCenter.style.alignItems = "center";
+minusButton.addEventListener("click", function () {
+  fontSize -= 1;
+  text.style.fontSize = fontSize + "px";
+});
 
-var containerWrapper = document.querySelector(".wrapper");
-
-containerWrapper.style.display = "flex";
-containerWrapper.style.flexDirection = "row";
-containerWrapper.style.gap = "40px";
-var containerCard = document.querySelector(".card");
-
-containerCard.style.border = "2px solid black";
-containerCard.style.height = "350px";
-containerCard.style.width = "350px";
-containerCard.style.borderRadius = "10px";
-
-var containerCard2 = document.querySelector(".card2");
-
-containerCard2.style.border = "2px solid black";
-containerCard2.style.height = "350px";
-containerCard2.style.width = "350px";
-containerCard2.style.borderRadius = "10px";
-
-var containerCard3 = document.querySelector(".card3");
-
-containerCard3.style.border = "2px solid black";
-containerCard3.style.height = "350px";
-containerCard3.style.width = "350px";
-containerCard3.style.borderRadius = "10px";
-
-var cardItems = document.querySelector(".cardItems");
-
-const icon = document.createElement("i");
-
-icon.className = '<i class="fa-brands fa-twitter fa-3x"></i>';
+applyButton.addEventListener("click", function() {
+      text.style.color = input.value;
+})
