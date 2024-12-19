@@ -10,9 +10,6 @@
 
 const BASE_URL = "northwind.vercel.app/api/";
 
-function sayHi() {
-  console.log("Hello World!");
-}
 
 function sum(a, b) {
   return a + b;
